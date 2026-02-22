@@ -12,7 +12,30 @@
             let c = document.getElementById("no3").value;
             let d = document.getElementById("no4").value;
             let e = document.getElementById("no5").value;
-            document.getElementById("r1").innerText = parseInt(a) + parseInt(b) + parseInt(c) + parseInt(d) + parseInt(e);
+            let jack = parseInt(a) + parseInt(b) + parseInt(c) + parseInt(d) + parseInt(e);
+            document.getElementById("r1").innerText = (jack)
+            if (jack < 165) { document.getElementById("r2").innerText = "Fail"; }
+            else {
+                if (a < 0 && b < 0 && c < 0 && d < 0 && e < 0) {
+                    document.getElementById("r2").innerText = "Please fill all subject Marks";
+                }
+                else {
+                    if (a < 33 && a > 0)
+                        document.getElementById("r2").innerText = "Fail in Hindi";
+                    else if (b < 33 && b > 0)
+                        document.getElementById("r2").innerText = "Fail in English";
+                    else if (c < 33 && c > 0)
+                        document.getElementById("r2").innerText = "Fail in Science";
+                    else if (d < 33 && d > 0)
+                        document.getElementById("r2").innerText = "Fail in Maths";
+                    else if (e < 33 && e > 0)
+                        document.getElementById("r2").innerText = "Fail in SST";
+
+
+                }
+
+
+            }
         }
         function sunny2() {
             let a = document.getElementById("no1").value;
@@ -21,11 +44,44 @@
             let d = document.getElementById("no4").value;
             let e = document.getElementById("no5").value;
             let hack = (parseInt(a) + parseInt(b) + parseInt(c) + parseInt(d) + parseInt(e)) / 5
-            if (hack < 33) {
-                document.getElementById("r1").innerText = "Student failed = " + (parseInt(a) + parseInt(b) + parseInt(c) + parseInt(d) + parseInt(e)) / 5 + "%";
-            } else {
-                document.getElementById("r1").innerText = "Student pass = " + (parseInt(a) + parseInt(b) + parseInt(c) + parseInt(d) + parseInt(e)) / 5 + "%";
+            if (a == false || b == false || c == false || d == false || e == false) {
+                alert("Please fill all subject Marks");
+                return
             }
+            else {
+                if (a < 33 || b < 33 || c < 33 || d < 33 || e < 33) {
+                    document.getElementById("r1").innerText = "Student failed "
+                    
+                }
+                else {
+                    document.getElementById("r1").innerText = "Student pass = " + (parseInt(a) + parseInt(b) + parseInt(c) + parseInt(d) + parseInt(e)) / 5 + "%";
+                }
+                if (hack < 33) {
+                  document.getElementById("r2").innerText = " Student Fail"
+                }
+                else {
+                    if (a < 33)
+                        document.getElementById("r2").innerText = "Fail in Hindi"
+                    else if (b < 33)
+                        document.getElementById("r2").innerText = "Fail in English"
+                    else if (c < 33)
+                        document.getElementById("r2").innerText = "Fail in Science"
+                    else if (d < 33)
+                        document.getElementById("r2").innerText = "Fail in Maths"
+                    else if (e < 33)
+                        document.getElementById("r2").innerText = "Fail in SST"
+                    else if (hack >= 33 && hack < 50)
+                        document.getElementById("r2").innerText = "Third division"
+                    else if (hack >= 50 && hack < 70)
+                        document.getElementById("r2").innerText = "Second division"
+                    else if (hack >= 70 && hack < 100)
+                        document.getElementById("r2").innerText = "First division"
+
+
+
+                }
+            }
+
         }
 
     </script>
@@ -34,21 +90,22 @@
 <body>
     <div class="container">
         <div class="heading">
-            <h1>Calculator</h1><br>
+            <h1>Result</h1><br>
         </div>
         <div class="content">
             <label>Hindi </label>
             <input id="no1" type="number" style="margin-left: 20px;"><br>
             <label>English </label>
             <input id="no2" type="number" style="margin-left: 5px;">
-            <label>science</label>
-            <input id="no3" type="number" style="margin-left: 7px;">
+            <label>Science</label>
+            <input id="no3" type="number" style="margin-left: 3px;">
             <label>Maths</label>
-            <input id="no4" value="" type="number" style="margin-left: 15px;"><br>
+            <input id="no4" type="number" style="margin-left: 15px;"><br>
             <label>SST</label>
-            <input id="no5" value="" type="number" style="margin-left: 30px;">
+            <input id="no5" type="number" style="margin-left: 30px;">
         </div><br>
         <div class="Result" id="r1">Result</div>
+        <div class="Result" id="r2">Division</div>
         <br><br><br>
         <div class="button2">
             <button class="button" onclick="sunny()">Total Marks</button>

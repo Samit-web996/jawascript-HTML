@@ -75,11 +75,11 @@
 let b = 30;
 console.log( a>b | b );*/
 
-let a = 15;
-let b = 25;
-console.log(a = a ^ b);
-console.log(b = a^b);
-console.log(a = a^b);
+// let a = 15;
+// let b = 25;
+// console.log(a = a ^ b);
+// console.log(b = a^b);
+// console.log(a = a^b);
 
 
 

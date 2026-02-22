@@ -1,0 +1,183 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.container{
+    background:linear-gradient(135deg, #71b7e6, #9b59b6);
+    height: 100vh;
+    width:100vw;
+    display: flex;
+    
+}
+.innerDiv{
+    background-color: whitesmoke;
+    height: 95vh;
+    width: 94vw;
+    margin: 25px;
+    margin-top: 10px;    
+    display: flex;   
+    border-radius: 10px; 
+}
+.sideBar{
+    background: rgba(20,21,45,255);
+    height: 95vh;
+    width: 15vw;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+   
+}
+.s1{
+    /* background-color: #c7a9d3; */
+    width: 10vw;
+    height: 28vh;
+    margin-top: 33px;
+    justify-self: center;
+    margin-left: 30px;
+    
+}
+.s2{
+    /* background-color: #9b59b6; */
+    width: 10vw;
+    height: 35vh;
+    justify-self: center;
+    margin-left: 30px;
+    text-wrap: 10px;
+    margin-top: 10px;
+}
+.s3{
+    /* background-color: aliceblue; */
+    width: 10vw;
+    height: 18vh;
+    border-bottom-left-radius: 5px;
+    justify-self: center;
+    margin-left: 30px;
+     margin-top: 10px;
+}
+.body1{
+    background: rgba(1,2,29,255);
+    height:95vh ;
+    width: 79vw;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    margin-left: 11px;
+      
+}
+
+.navBar{
+    background:rgba(20,21,45,255);
+    height: 10vh;
+    width: 99%;
+    padding-left: 10px;
+    border-top-right-radius: 10px; 
+    display: flex;
+
+}
+.navBar button{
+    color: white;
+    padding: 0.3rem;
+    border-radius: 5px;
+    border: none;
+    margin-top: 10px;
+    background-color: hsla(209, 96%, 51%, 0.882);
+}
+.Menu{
+    width: 70vw;   
+    
+}
+.userName{
+    width: 30vw ;
+    text-align: end;
+    color: white;
+    padding:10px 20px 0 0;
+    border-top-right-radius: 5px; 
+    font-size:small;
+    
+}
+.heading{
+    height: 10vh;
+    width: 79vw;
+    
+    
+}
+h2{
+    color: white;
+    padding-left: 20px;
+    padding-top: 15px;
+    font-weight: 500;
+    
+    
+}
+.center{
+    background-color:rgba(1,2,29,255);
+    height: 20vh;
+    width: 100%;
+    display: flex;
+}
+.card1{
+    background-color:rgba(20,21,45,255);
+    height: 20vh;
+    width: 70%;
+    margin: 0 20px 0 20px;
+    border-radius: 5px;
+    color: white;
+    display: flex;
+}
+.c1{
+    width: 80px;
+    height:20vh ;
+    border-bottom-left-radius: 5px;
+    border-top-left-radius: 5px; 
+    
+    
+}
+
+ .c2{
+    width: 150px;
+    height:20vh ; 
+    border-bottom-right-radius: 5px;
+    border-top-right-radius: 5px; 
+    align-content: center;
+    
+} 
+.bottom{
+    background-color:rgba(1,2,27,255);
+    height: 55vh;
+    width: 100%;
+    border-bottom-right-radius: 10px;
+    display: flex;
+    
+}
+.graph1{
+    background: rgba(20,21,45,255);
+    height: 95%;
+    width: 100%;
+    margin: 20px 10px 0 20px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+   } 
+.chart-container {
+      width: 600px;
+      height: 330px;
+      /* margin: 50px auto; */
+      background: rgba(20,21,45,255);
+      padding: 20px;
+      border-radius: 10px;
+      /* box-shadow: 0 4px 8px white; */
+    }
+.chart-container1 {
+    width: 460px;
+    height: 230px;
+    background: rgba(20,21,45,255);
+    padding: 20px;
+    border-radius: 10px;
+    /* margin-top: 50px; */
+     }
+.graph2{
+    background: rgba(20,21,45,255);
+    height: 95%;
+    width: 80%;
+    margin: 20px 20px 0 10px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}

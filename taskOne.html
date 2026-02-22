@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TaskOne</title>
+  <link rel="stylesheet" href="taskOne.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+</head>
+
+<body>
+  <div class="container">
+    <div class="innerDiv">
+      <div class="sideBar">
+        <h2><span style="font-weight: 600;">Plain</span>Admin</h2>
+        <div class="s1">
+          <h4 style="color: white;font-size: small;">Dashboard</h4><br>
+          <p style="font-size: small;color: grey;"><span
+              style="color: white;font-weight: 400;font-size: small;">eCommerce</span><br><br>Analytics <br><br> Crypto
+            <br><br> CRM <br><br> Marketing
+          </p>
+        </div>
+        <div class="s2">
+          <p style="font-size: small;color: grey;"><span style="font-size: small;">Pages</span><br><br>kanabn <br><br>
+            File Manager <br><br> Profile <br><br> invoice <br><br> Task <br><br> Calender <br><br> Auth </p>
+        </div>
+        <div class="s3">
+          <p style="font-size: small;color: grey;"><span style="font-size: small;">UI Element</span><br><br>icons
+            <br><br> Forms <br><br> Tables
+          </p>
+        </div>
+      </div>
+      <div class="body1">
+        <div class="navBar">
+          <div class="Menu">
+            <button>
+              < Menu</button>
+                <input type="search" placeholder="Search here..."
+                  style="border-radius: 5px;padding-left: 10px;height: 25px;">
+          </div>
+          <div class="userName">
+            <p><span style="font-weight: 600;">Sunny Raj </span><br>Admin</p>
+          </div>
+        </div>
+        <div class="heading">
+          <h2>eCommerce Dashboard</h2>
+          <p style="text-align: end;"><span style="color: grey; font-size: small;">Dashboard /</span><span
+              style="color: blue;font-size: small">eCommerce</span></p>
+        </div>
+        <div class="center">
+          <div class="card1">
+            <div class="c1"></div>
+            <div class="c2">
+              <p style="font-size: medium;">New Order <br> <span style="font-weight: 600;">34567</span><br><span
+                  style="color: green;font-size: smaller;">+2.00%</span><span style="color: grey;font-size: smaller">(30
+                  days)</span></p>
+            </div>
+          </div>
+          <div class="card1">
+            <div class="c1"></div>
+            <div class="c2">
+              <p style="font-size: medium;">Total Income <br> <span style="font-weight: 600;">$74,567</span><br><span
+                  style="color: green;font-size: smaller;">+5.45%%</span><span
+                  style="color: grey;font-size: smaller">Increased</span></p>
+            </div>
+          </div>
+          <div class="card1">
+            <div class="c1"></div>
+            <div class="c2">
+              <p style="font-size: medium;">Total Expense <br> <span style="font-weight: 600;">$24,567</span><br><span
+                  style="color: red;font-size: smaller;">-2.00%</span><span
+                  style="color: grey;font-size: smaller">Expense</span></p>
+            </div>
+          </div>
+          <div class="card1">
+            <div class="c1"></div>
+            <div class="c2">
+              <p style="font-size: medium;">New User <br> <span style="font-weight: 600;">34567</span><br><span
+                  style="color: red;font-size: smaller;">-25.00%</span><span
+                  style="color: grey;font-size:smaller">Earning</span></p>
+            </div>
+          </div>
+        </div>
+        <div class="bottom">
+          <div class="graph1">
+            <div class="chart-container">
+              <canvas id="myLineChart"></canvas>
+            </div>
+            <script>
+              const ctx = document.getElementById('myLineChart').getContext('2d');
+              const myLineChart = new Chart(ctx, {
+                type: 'line', // Line chart
+                data: {
+                  labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug ', 'Sept', 'Oct', 'Nov', 'Dec'], // X-axis labels
+                  datasets: [{
+                    label: '$24567',
+                    data: [600, 800, 750, 950, 850, 800, 900, 750, 900, 850, 950, 1100], // Y-axis values
+                    borderColor: 'blue',
+                    backgroundColor: 'rgba(0, 123, 255, 0.3)',
+                    //   fill: true,
+                    tension: 0.3  // curve effect in line
+
+
+                  }]
+                },
+                options: {
+                  responsive: true,
+                  plugins: {
+                    legend: {
+                      position: 'top',
+                    },
+                    title: {
+                      display: true,
+                      text: 'Yearly Stats'
+                    }
+                  }
+                }
+              });
+            </script>
+          </div>
+          <div class="graph2">
+            <div class="chart-container1">
+              <canvas id="myBarChart"></canvas>
+            </div>
+
+            <script>
+              const ct = document.getElementById('myBarChart').getContext('2d');
+
+              const myBarChart = new Chart(ct, {
+                type: 'bar',
+                data: {
+                  labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug ', 'Sept', 'Oct', 'Nov', 'Dec'], // X-axis labels
+                  datasets: [{
+                    label: 'Sales in 2025',
+                    data: [600, 800, 750, 950, 850, 800, 900, 750, 900, 850, 950, 1100], // Y-axis values
+                    backgroundColor: 'rgba(0, 123, 255, 0.3)', // Bar ka color
+
+                  }]
+                },
+                options: {
+                  responsive: true,
+                  plugins: {
+                    legend: {
+                      position: 'top',
+                    },
+                    title: {
+                      display: true,
+                      text: 'Monthly Sales / Revenue'
+                    }
+                  },
+                  scales: {
+                    y: {
+                      beginAtZero: true // Y-axis 0 se start hoga
+                    }
+                  }
+                }
+              });
+            </script>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

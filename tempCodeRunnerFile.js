@@ -1,4 +1,3 @@
-if (per<33)
-//     console.log(pass);
-// else(per>33)
-//     console.log(fail);
+let h = 75
+let e = 45
+let m = 98
